@@ -1,11 +1,13 @@
 *** Changelog ***
+= 13.0.1 - 2023.03.29 =
+* Fix - Code structures optimized to match Zen Cart coding standards
 
-= 13.0.1 - 2020.03.07 =
+= 13.0.1 - 2023.03.07 =
 * Fix - Transaction amount mismatch for PayPal payment
 * Fix - Adjusted payment module for standard Instalment cancellation process
 * Enhanced - Payment module has been updated for Zen Cart 1.5.7f German version
 
-= 13.0.0 - 2020.10.01 =
+= 13.0.0 - 2023.02.17 =
 Major version release: We've improved the seamless customer experience and brand configurations in the Novalnet Merchant Admin Portal to make it easier to preview and customise the checkout page
 
 = 2.0.0 - 2020.10.01 =
