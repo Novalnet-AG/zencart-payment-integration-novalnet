@@ -2,7 +2,7 @@
 <a href="https://www.novalnet.com/modul/zencart-payment-module">Zen Cart</a> payment module by Novalnet enables secure integration of payments and payment services for all Zen Cart shops. Novalnet payment module for Zen Cart shop helps merchants to automate payment processing from checkout till collection.
 
 ## Integration requirements for Zen Cart
-Novalnet <a href="https://www.novalnet.de/"> merchant account </a> is required for processing all international and local payments through this ZenCart Payment Gateway. The module is available for the ZenCart versions 1.5.7f in the following languages: EN & DE
+Novalnet <a href="https://www.novalnet.de/"> merchant account </a> is required for processing all international and local payments through this ZenCart Payment Gateway. The module is available for the ZenCart versions 1.5.7f-1.5.7h in the following languages: EN & DE
 
 ## Key features of ZenCart payment integration
 - Easy configuration of all international & local payment methods
@@ -20,13 +20,14 @@ Novalnet <a href="https://www.novalnet.de/"> merchant account </a> is required f
 - Seamless checkout Iframe integration
 - One-click shopping enabled for commonly used payment types
 - Easy confirmation/cancellation of on-hold transactions for selected payment types
-- Refund option for moat of the payment types
+- Refund option for commonly used payment types
 - Responsive templates	
 
 For detailed documentation and other technical inquiries, please send us an email at <a href="mailto:sales@novalnet.de"> sales@novalnet.de </a>
 
 ## Integrated payment methods
 - Direct Debit SEPA
+- Direct Debit ACH
 - Credit/Debit Cards 
 - Apple Pay
 - Google Pay
@@ -43,6 +44,7 @@ For detailed documentation and other technical inquiries, please send us an emai
 - Instalment by Invoice
 - Instalment by Direct Debit SEPA
 - PayPal
+- MB Way
 - PostFinance Card
 - PostFinance E-Finance
 - Bancontact
@@ -51,6 +53,8 @@ For detailed documentation and other technical inquiries, please send us an emai
 - Alipay
 - WeChat Pay
 - Trustly
+- Blik
+- Payconiq
 
 ## Quick Installation via plugin downloads
 Follow these steps to install the Zencart payment module by Novalnet:
