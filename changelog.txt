@@ -1,5 +1,13 @@
 *** Changelog ***
 
+= 13.3.0 - 2023.03.22 =
+* New - Implemented Direct Debit ACH, MB Way, Payconiq and Blik payments
+* Fix - Adapted the sort menu in the shop admin for Novalnet transactions overview to match shop CSS
+* Fix - Sort order in the Novalnet transactions overview based on the order status
+* Fix - Restructured installment payment tables to improve the readability in the shop's admin interface
+* Enhanced - Offering Instalment payments and Guarantee payments to B2B customers in Switzerland
+* Removed - Payment due date configuration for Direct Debit SEPA with payment guarantee
+
 = 13.2.0 - 2023.03.15 =
 * New - Implemented Novalnet Transaction Overview in the shop admin area
 * New - Barzahlen/viacash payment slip implemented on the payment success page
