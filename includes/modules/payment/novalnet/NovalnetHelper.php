@@ -558,7 +558,11 @@ class NovalnetHelper
         global $currencies;
         $txn_details = '';
         $amount = 0;
+        if(isset($response['instalment']['currency'])){
         $amount = $currencies->format($response['instalment']['cycle_amount']/100, false, $response['instalment']['currency']);
+        }else{
+        $amount = $currencies->format($response['instalment']['cycle_amount']/100, false, $response['transaction']['currency']);   
+        }
 
         if ($response['transaction']['status'] == 'CONFIRMED') {
             $txn_details .= PHP_EOL.MODULE_PAYMENT_NOVALNET_INSTALMENT_INSTALMENTS_INFO.PHP_EOL.MODULE_PAYMENT_NOVALNET_INSTALMENT_PROCESSED_INSTALMENTS.$response['instalment']['cycles_executed'] . PHP_EOL;
@@ -980,12 +984,13 @@ class NovalnetHelper
     public static function sendPaymentConfirmationMail($comments, $order_no)
     {
         global $db;
+        global $zcDate;
         $customer_info = '';
         $customer_info = $db->Execute("SELECT * FROM ".TABLE_ORDERS." WHERE orders_id = '".$order_no."'");
         $customer_details = $customer_info->fields;
         $customer_name = $customer_details['customers_name'];
         $email_subject   = sprintf(MODULE_PAYMENT_NOVALNET_ORDER_MAIL_SUBJECT, $order_no, STORE_NAME);
-        $email_content   = sprintf(MODULE_PAYMENT_NOVALNET_ORDER_MAIL_MESSAGE, STORE_NAME). PHP_EOL. MODULE_PAYMENT_NOVALNET_CUSTOMER_SALUTATION. '<b>'. $customer_details['customers_name'].PHP_EOL .sprintf(MODULE_PAYMENT_NOVALNET_ORDER_NUMBER, $order_no) . PHP_EOL. sprintf(MODULE_PAYMENT_NOVALNET_ORDER_MAIL_DATE, strftime(DATE_FORMAT_LONG)). PHP_EOL.  MODULE_PAYMENT_NOVALNET_ORDER_CONFIRMATION .zen_href_link(FILENAME_ACCOUNT_HISTORY_INFO, 'order_id=' . $order_no, 'SSL', false) . PHP_EOL . nl2br($comments);
+        $email_content   = sprintf(MODULE_PAYMENT_NOVALNET_ORDER_MAIL_MESSAGE, STORE_NAME). PHP_EOL. MODULE_PAYMENT_NOVALNET_CUSTOMER_SALUTATION. '<b>'. $customer_details['customers_name'].PHP_EOL .sprintf(MODULE_PAYMENT_NOVALNET_ORDER_NUMBER, $order_no) . PHP_EOL. sprintf(MODULE_PAYMENT_NOVALNET_ORDER_MAIL_DATE,  $zcDate->output(DATE_FORMAT_LONG)). PHP_EOL.  MODULE_PAYMENT_NOVALNET_ORDER_CONFIRMATION .zen_href_link(FILENAME_ACCOUNT_HISTORY_INFO, 'order_id=' . $order_no, 'SSL', false) . PHP_EOL . nl2br($comments);
         $email_content .= PHP_EOL.MODULE_PAYMENT_NOVALNET_DELIVERY_ADDRESS. PHP_EOL. $customer_details['delivery_name'] .PHP_EOL .  $customer_details['delivery_street_address'] . PHP_EOL. $customer_details['delivery_postcode'] . PHP_EOL . $customer_details['delivery_city'] . PHP_EOL . $customer_details['delivery_country'] . PHP_EOL;
         $email_content .= PHP_EOL .MODULE_PAYMENT_NOVALNET_BILLING_ADDRESS. PHP_EOL. $customer_details['billing_name'] .PHP_EOL .  $customer_details['billing_street_address'] . PHP_EOL. $customer_details['billing_postcode'] . PHP_EOL . $customer_details['billing_city'] . PHP_EOL . $customer_details['billing_country'] . PHP_EOL;
         zen_mail($customer_name, $customer_details['customers_email_address'], $email_subject, str_replace('</br>', PHP_EOL, $email_content), '', '', array(), '', '', STORE_NAME, EMAIL_FROM);

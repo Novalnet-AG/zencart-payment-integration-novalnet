@@ -41,7 +41,7 @@ if (defined('MODULE_PAYMENT_NOVALNET_STATUS') && MODULE_PAYMENT_NOVALNET_STATUS 
         $output .=  zen_draw_hidden_field('nn_zero_amount_book_confirm', MODULE_PAYMENT_NOVALNET_PAYMENT_ZERO_AMOUNT_BOOK_CONFIRM);
         $output .=  zen_draw_hidden_field('nn_amount_error', MODULE_PAYMENT_NOVALNET_AMOUNT_ERROR_MESSAGE);
         $output .= '<td class="dataTableContent">';
-        $output .= zen_draw_input_field('book_amount', $amount, 'id="book_amount" autocomplete="off" style="margin:0% 0% 0% 2%"') . MODULE_PAYMENT_NOVALNET_AMOUNT_EX . '</td></tr>';
+        $output .= zen_draw_input_field('book_amount', $amount, 'id="book_amount" autocomplete="off" onkeypress="isNumber(event)"  style="margin:0% 0% 0% 2%"') . MODULE_PAYMENT_NOVALNET_AMOUNT_EX . '</td></tr>';
         $output .= '<tr class="dataTableRow"><td class="dataTableContent">'.zen_draw_input_field('nn_book_confirm', html_entity_decode(MODULE_PAYMENT_NOVALNET_CONFIRM_TEXT), 'class="btn btn-primary" onclick="return refund_amount_validation();" style="float:left"', false, 'submit').'</td><td></td></tr>';
         $output .= '</form>';
         $output .='</table></td>'."\n";
@@ -180,8 +180,8 @@ if (defined('MODULE_PAYMENT_NOVALNET_STATUS') && MODULE_PAYMENT_NOVALNET_STATUS 
                 $nn_instalment_table .= zen_draw_hidden_field('instalment_cycle', ''.$key.'');
                 $nn_instalment_table .= zen_draw_hidden_field('nn_amount_error', MODULE_PAYMENT_NOVALNET_AMOUNT_ERROR_MESSAGE);
                 $nn_instalment_table .= zen_draw_hidden_field('nn_refund_amount_confirm', MODULE_PAYMENT_NOVALNET_PAYMENT_REFUND_CONFIRM);
-                $nn_instalment_table .= zen_draw_input_field('refund_trans_amount', $instalment_amount, 'id="refund_trans_amount"  style="width:100px;margin:0 0 0 2%" autocomplete="off"')."&nbsp;";
-                $nn_instalment_table .= zen_draw_input_field('nn_refund_confirm', html_entity_decode(MODULE_PAYMENT_NOVALNET_CONFIRM_TEXT), 'class="btn btn-primary" onclick="return refund_amount_validation();" ', false, 'submit')."&nbsp;" ;
+                $nn_instalment_table .= zen_draw_input_field('refund_trans_amount', $instalment_amount, 'id="refund_trans_amount" onkeypress="isNumber(event)" style="width:100px;margin:0 0 0 2%" autocomplete="off"')."&nbsp;";
+                $nn_instalment_table .= zen_draw_input_field('nn_refund_confirm', html_entity_decode(MODULE_PAYMENT_NOVALNET_CONFIRM_TEXT), 'class="btn btn-primary"', false, 'submit')."&nbsp;" ;
                 $nn_instalment_table .= "<a class='btn btn-primary' href='" . zen_href_link(FILENAME_ORDERS, 'oID=' . $request['oID'] . '&action=edit') . "'>" . MODULE_PAYMENT_NOVALNET_INSTALMENT_CANCEL_TEXT . "</a>";
                 $nn_instalment_table .= '</div></form></td></tr>';
             }
