@@ -295,7 +295,7 @@ class NovalnetWebhooks
 
         $order_status = NovalnetHelper::getOrderStatus($this->event_data['transaction']['status'], $this->event_data['transaction']['payment_type']);
         if (!empty($this->event_data['transaction']['due_date'])) {
-            $comments = sprintf(MODULE_PAYMENT_NOVALNET_TRANS_CONFIRM_SUCCESSFUL_MESSAGE, $this->event_data['transaction']['tid'], gmdate('d.m.Y')) . PHP_EOL;
+            $comments = sprintf(MODULE_PAYMENT_NOVALNET_TRANS_CONFIRM_SUCCESSFUL_MESSAGE, $this->event_data['transaction']['tid'], date('d.m.Y', strtotime($this->event_data['transaction']['due_date']))) . PHP_EOL;
         } else {
             $comments = sprintf(MODULE_PAYMENT_NOVALNET_TRANS_CONFIRM_SUCCESSFUL_MESSAGE_TEXT, gmdate('d.m.Y')) . PHP_EOL;
         }
