@@ -158,16 +158,16 @@ define('MODULE_PAYMENT_NOVALNET_WEBHOOK_PROJECT_ID', 'Projekt-ID: ');
 define('MODULE_PAYMENT_NOVALNET_WEBHOOK_REGARDS', 'Herzliche Grüße,');
 
 
-define('MODULE_PAYMENT_NOVALNET_WEBHOOK_MAIL_CAPTURE_SUBJECT', 'Transaktion über Novalnet bestätigt');
-define('MODULE_PAYMENT_NOVALNET_WEBHOOK_MAIL_CANCEL_SUBJECT', 'Transaktion Stornierte über Novalnet');
-define('MODULE_PAYMENT_NOVALNET_WEBHOOK_MAIL_REFUND_SUBJECT', 'Transaktion Rückerstattung über Novalnet');
-define('MODULE_PAYMENT_NOVALNET_WEBHOOK_MAIL_CREDIT_SUBJECT', 'Guthaben erhalten über Novalnet');
-define('MODULE_PAYMENT_NOVALNET_WEBHOOK_MAIL_CHARGEBACK_SUBJECT', 'Rückbuchung über Novalnet erhalten');
-define('MODULE_PAYMENT_NOVALNET_WEBHOOK_MAIL_INSTALMENT_SUBJECT', 'Neue Rate über Novalnet erhalten');
-define('MODULE_PAYMENT_NOVALNET_WEBHOOK_MAIL_INSTALMENT_CANCEL_SUBJECT', 'Ratenzahlung über Novalnet gekündigt');
-define('MODULE_PAYMENT_NOVALNET_WEBHOOK_MAIL_TRANS_UPDATE_SUBJECT', 'Transaktion aktualisiert über Novalnet');
-define('MODULE_PAYMENT_NOVALNET_WEBHOOK_MAIL_REMINDER_SUBJECT', 'Zahlungserinnerung über Novalnet');
-define('MODULE_PAYMENT_NOVALNET_WEBHOOK_MAIL_COLLECTION_SUBMISSION_SUBJECT', 'Kollektionseinreichung über Novalnet');
+define('MODULE_PAYMENT_NOVALNET_WEBHOOK_MAIL_CAPTURE_SUBJECT', 'Transaktion via Novalnet bestätigt');
+define('MODULE_PAYMENT_NOVALNET_WEBHOOK_MAIL_CANCEL_SUBJECT', 'Transaktion Storniert via Novalnet');
+define('MODULE_PAYMENT_NOVALNET_WEBHOOK_MAIL_REFUND_SUBJECT', 'Transaktion Rückerstattung via Novalnet');
+define('MODULE_PAYMENT_NOVALNET_WEBHOOK_MAIL_CREDIT_SUBJECT', 'Guthaben erhalten via Novalnet');
+define('MODULE_PAYMENT_NOVALNET_WEBHOOK_MAIL_CHARGEBACK_SUBJECT', 'Rückbuchung via Novalnet erhalten');
+define('MODULE_PAYMENT_NOVALNET_WEBHOOK_MAIL_INSTALMENT_SUBJECT', 'Neue Rate via Novalnet erhalten');
+define('MODULE_PAYMENT_NOVALNET_WEBHOOK_MAIL_INSTALMENT_CANCEL_SUBJECT', 'Ratenzahlung via Novalnet gekündigt');
+define('MODULE_PAYMENT_NOVALNET_WEBHOOK_MAIL_TRANS_UPDATE_SUBJECT', 'Transaktion aktualisiert via Novalnet');
+define('MODULE_PAYMENT_NOVALNET_WEBHOOK_MAIL_REMINDER_SUBJECT', 'Zahlungserinnerung via Novalnet');
+define('MODULE_PAYMENT_NOVALNET_WEBHOOK_MAIL_COLLECTION_SUBMISSION_SUBJECT', 'Inkassoübergabe via Novalnet');
 define('MODULE_PAYMENT_NOVALNET_WEBHOOK_MAIL_SUPPORT_TEXT', 'Wenn Sie weitere Unterstützung benötigen, wenden Sie sich bitte an unser Support-Team unter support@novalnet.de. Oder besuchen Sie Ihr Novalnet-Administrationsportal für weitere Informationen.');
 define('MODULE_PAYMENT_NOVALNET_WEBHOOK_MAIL_TRANS_DETAILS_TEXT', 'Transaktionsdetails:');
-define('MODULE_PAYMENT_NOVALNET_WEBHOOK_MAIL_COLLECTION_STATUS', 'Status der Sammlung: ');
+define('MODULE_PAYMENT_NOVALNET_WEBHOOK_MAIL_COLLECTION_STATUS', 'Inkasso Status: ');
