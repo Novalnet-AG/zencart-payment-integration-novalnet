@@ -2,7 +2,7 @@
 <a href="https://www.novalnet.com/modul/zencart-payment-module">Zen Cart</a> payment module by Novalnet enables secure integration of payments and payment services for all Zen Cart shops. Novalnet payment module for Zen Cart shop helps merchants to automate payment processing from checkout till collection.
 
 ## Integration requirements for Zen Cart
-Novalnet <a href="https://www.novalnet.de/"> merchant account </a> is required for processing all international and local payments through this ZenCart Payment Gateway. The module is available for the ZenCart versions 1.5.7f - 1.5.7j in the following languages: EN & DE
+Novalnet <a href="https://www.novalnet.de/"> merchant account </a> is required for processing all international and local payments through this ZenCart Payment Gateway. The module is available for the ZenCart versions 1.5.7f - 1.5.7k in the following languages: EN & DE
 
 ## Key features of ZenCart payment integration
 - Easy configuration of all international & local payment methods
@@ -35,7 +35,7 @@ For detailed documentation and other technical inquiries, please send us an emai
 - Prepayment
 - Invoice with payment guarantee
 - Direct Debit SEPA with payment guarantee
-- iDEAL
+- iDEAL | Wero
 - Przelewy24
 - eps
 - Instalment by Invoice
@@ -51,7 +51,6 @@ For detailed documentation and other technical inquiries, please send us an emai
 - WeChat Pay
 - Trustly
 - Blik
-- Payconiq
 
 ## Quick Installation via plugin downloads
 Follow these steps to install the Zencart payment module by Novalnet:
